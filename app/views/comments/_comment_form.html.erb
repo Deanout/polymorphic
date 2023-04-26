@@ -1,0 +1,10 @@
+<h2>Add a comment:</h2>
+<%= form_with(model: [ commentable, Comment.new(commentable: commentable) ], local: true) do |form| %>
+  <div class="field">
+    <%= form.label :body %>
+    <%= form.text_area :body %>
+  </div>
+  <div class="actions">
+    <%= form.submit "Reply" %>
+  </div>
+<% end %>
